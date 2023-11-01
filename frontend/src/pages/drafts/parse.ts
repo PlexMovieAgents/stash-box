@@ -136,6 +136,23 @@ const parseBreastType = (value: string | null | undefined) => {
   }
 };
 
+const parseMeasurementsJP = (value: string | null | undefined) => {
+  const parsedMeasurements = value?.match(
+    /^JP\s*(\d{2,3})([a-zA-Z]+)?(?:-|\s)(\d{2,3})(?:-|\s)(\d{2,3})\s*\(US\s*(\d{2})([a-zA-Z]+)?(?:-|\s)(\d{2})(?:-|\s)(\d{2})\)$/
+  );
+  if (!parsedMeasurements || parsedMeasurements?.length != 9) return null;
+  
+  return {
+    band_jp: Number.parseInt(parsedMeasurements[1]),
+    cup_jp: parsedMeasurements[2],
+    waist_jp: Number.parseInt(parsedMeasurements[3]),
+    hip_jp: Number.parseInt(parsedMeasurements[4]),
+    band_us: Number.parseInt(parsedMeasurements[5]),
+    cup_us: parsedMeasurements[6],
+    waist_us: Number.parseInt(parsedMeasurements[7]),
+    hip_us: Number.parseInt(parsedMeasurements[8]),
+  }
+}
 const parseMeasurements = (value: string | null | undefined) => {
   const parsedMeasurements = value?.match(
     /^(\d\d)([a-zA-Z]+)(?:-|\s)(\d\d)(?:-|\s)(\d\d)$/
@@ -162,9 +179,10 @@ export const parsePerformerDraft = (
   draft: PerformerDraft,
   existingPerformer: PerformerFragment | undefined
 ): [InitialPerformer, Record<string, string | null>] => {
+  const measurementsJP = parseMeasurementsJP(draft?.measurements);
   const measurements = parseMeasurements(draft?.measurements);
   const draftAliases = parseAliases(draft?.aliases);
-
+  
   const performer: InitialPerformer = {
     name: draft.name,
     disambiguation: null,
@@ -189,14 +207,14 @@ export const parsePerformerDraft = (
       draft?.career_end_year ?? existingPerformer?.career_end_year,
     breast_type:
       parseBreastType(draft?.breast_type) ?? existingPerformer?.breast_type,
-    band_size_us: measurements?.band ?? existingPerformer?.band_size_us,
-    waist_size_us: measurements?.waist ?? existingPerformer?.band_size_us,
-    hip_size_us: measurements?.hip ?? existingPerformer?.hip_size_us,
-    cup_size_us: measurements?.cup ?? existingPerformer?.cup_size_us,
-    band_size_jp: existingPerformer?.band_size_jp,
-    waist_size_jp: existingPerformer?.band_size_jp,
-    hip_size_jp: existingPerformer?.hip_size_jp,
-    cup_size_jp: existingPerformer?.cup_size_jp,
+    band_size_us: measurementsJP?.band_us ?? measurements?.band ?? existingPerformer?.band_size_us,
+    waist_size_us: measurementsJP?.waist_us ?? measurements?.waist ?? existingPerformer?.band_size_us,
+    hip_size_us: measurementsJP?.hip_us ?? measurements?.hip ?? existingPerformer?.hip_size_us,
+    cup_size_us: measurementsJP?.cup_us ?? measurements?.cup ?? existingPerformer?.cup_size_us,
+    band_size_jp: measurementsJP?.band_jp ?? existingPerformer?.band_size_jp,
+    waist_size_jp: measurementsJP?.waist_jp ?? existingPerformer?.band_size_jp,
+    hip_size_jp: measurementsJP?.hip_jp ?? existingPerformer?.hip_size_jp,
+    cup_size_jp: measurementsJP?.cup_jp ?? existingPerformer?.cup_size_jp,
     tattoos: existingPerformer?.tattoos ?? undefined,
     piercings: existingPerformer?.piercings ?? undefined,
     urls: existingPerformer?.urls,
