@@ -27,10 +27,14 @@ export type InitialPerformer = {
     };
   }[];
   aliases?: string[];
-  waist_size?: number | null;
-  hip_size?: number | null;
-  band_size?: number | null;
-  cup_size?: string | null;
+  waist_size_us?: number | null;
+  hip_size_us?: number | null;
+  band_size_us?: number | null;
+  cup_size_us?: string | null;
+  waist_size_jp?: number | null;
+  hip_size_jp?: number | null;
+  band_size_jp?: number | null;
+  cup_size_jp?: string | null;
   images?: {
     id: string;
     url: string;

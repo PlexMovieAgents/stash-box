@@ -317,10 +317,14 @@ type PerformerEdit struct {
 	EyeColor          *string             `json:"eye_color,omitempty"`
 	HairColor         *string             `json:"hair_color,omitempty"`
 	Height            *int64              `json:"height,omitempty"`
-	CupSize           *string             `json:"cup_size,omitempty"`
-	BandSize          *int64              `json:"band_size,omitempty"`
-	WaistSize         *int64              `json:"waist_size,omitempty"`
-	HipSize           *int64              `json:"hip_size,omitempty"`
+	CupSizeUS         *string             `json:"cup_size_us,omitempty"`
+	BandSizeUS        *int64              `json:"band_size_us,omitempty"`
+	WaistSizeUS       *int64              `json:"waist_size_us,omitempty"`
+	HipSizeUS         *int64              `json:"hip_size_us,omitempty"`
+	CupSizeJP         *string             `json:"cup_size_jp,omitempty"`
+	BandSizeJP        *int64              `json:"band_size_jp,omitempty"`
+	WaistSizeJP       *int64              `json:"waist_size_jp,omitempty"`
+	HipSizeJP         *int64              `json:"hip_size_jp,omitempty"`
 	BreastType        *string             `json:"breast_type,omitempty"`
 	CareerStartYear   *int64              `json:"career_start_year,omitempty"`
 	CareerEndYear     *int64              `json:"career_end_year,omitempty"`

@@ -259,10 +259,14 @@ type PerformerCreateInput struct {
 	EyeColor        *EyeColorEnum       `json:"eye_color"`
 	HairColor       *HairColorEnum      `json:"hair_color"`
 	Height          *int                `json:"height"`
-	CupSize         *string             `json:"cup_size"`
-	BandSize        *int                `json:"band_size"`
-	WaistSize       *int                `json:"waist_size"`
-	HipSize         *int                `json:"hip_size"`
+	CupSizeUs       *string             `json:"cup_size_us"`
+	BandSizeUs      *int                `json:"band_size_us"`
+	WaistSizeUs     *int                `json:"waist_size_us"`
+	HipSizeUs       *int                `json:"hip_size_us"`
+	CupSizeJp       *string             `json:"cup_size_jp"`
+	BandSizeJp      *int                `json:"band_size_jp"`
+	WaistSizeJp     *int                `json:"waist_size_jp"`
+	HipSizeJp       *int                `json:"hip_size_jp"`
 	BreastType      *BreastTypeEnum     `json:"breast_type"`
 	CareerStartYear *int                `json:"career_start_year"`
 	CareerEndYear   *int                `json:"career_end_year"`
@@ -309,10 +313,14 @@ type PerformerEditDetailsInput struct {
 	EyeColor        *EyeColorEnum       `json:"eye_color"`
 	HairColor       *HairColorEnum      `json:"hair_color"`
 	Height          *int                `json:"height"`
-	CupSize         *string             `json:"cup_size"`
-	BandSize        *int                `json:"band_size"`
-	WaistSize       *int                `json:"waist_size"`
-	HipSize         *int                `json:"hip_size"`
+	CupSizeUs       *string             `json:"cup_size_us"`
+	BandSizeUs      *int                `json:"band_size_us"`
+	WaistSizeUs     *int                `json:"waist_size_us"`
+	HipSizeUs       *int                `json:"hip_size_us"`
+	CupSizeJp       *string             `json:"cup_size_jp"`
+	BandSizeJp      *int                `json:"band_size_jp"`
+	WaistSizeJp     *int                `json:"waist_size_jp"`
+	HipSizeJp       *int                `json:"hip_size_jp"`
 	BreastType      *BreastTypeEnum     `json:"breast_type"`
 	CareerStartYear *int                `json:"career_start_year"`
 	CareerEndYear   *int                `json:"career_end_year"`
@@ -363,10 +371,14 @@ type PerformerQueryInput struct {
 	EyeColor        *EyeColorCriterionInput         `json:"eye_color"`
 	HairColor       *HairColorCriterionInput        `json:"hair_color"`
 	Height          *IntCriterionInput              `json:"height"`
-	CupSize         *StringCriterionInput           `json:"cup_size"`
-	BandSize        *IntCriterionInput              `json:"band_size"`
-	WaistSize       *IntCriterionInput              `json:"waist_size"`
-	HipSize         *IntCriterionInput              `json:"hip_size"`
+	CupSizeUs       *StringCriterionInput           `json:"cup_size_us"`
+	BandSizeUs      *IntCriterionInput              `json:"band_size_us"`
+	WaistSizeUs     *IntCriterionInput              `json:"waist_size_us"`
+	HipSizeUs       *IntCriterionInput              `json:"hip_size_us"`
+	CupSizeJp       *StringCriterionInput           `json:"cup_size_jp"`
+	BandSizeJp      *IntCriterionInput              `json:"band_size_jp"`
+	WaistSizeJp     *IntCriterionInput              `json:"waist_size_jp"`
+	HipSizeJp       *IntCriterionInput              `json:"hip_size_jp"`
 	BreastType      *BreastTypeCriterionInput       `json:"breast_type"`
 	CareerStartYear *IntCriterionInput              `json:"career_start_year"`
 	CareerEndYear   *IntCriterionInput              `json:"career_end_year"`
@@ -406,10 +418,14 @@ type PerformerUpdateInput struct {
 	EyeColor        *EyeColorEnum       `json:"eye_color"`
 	HairColor       *HairColorEnum      `json:"hair_color"`
 	Height          *int                `json:"height"`
-	CupSize         *string             `json:"cup_size"`
-	BandSize        *int                `json:"band_size"`
-	WaistSize       *int                `json:"waist_size"`
-	HipSize         *int                `json:"hip_size"`
+	CupSizeUs       *string             `json:"cup_size_us"`
+	BandSizeUs      *int                `json:"band_size_us"`
+	WaistSizeUs     *int                `json:"waist_size_us"`
+	HipSizeUs       *int                `json:"hip_size_us"`
+	CupSizeJp       *string             `json:"cup_size_jp"`
+	BandSizeJp      *int                `json:"band_size_jp"`
+	WaistSizeJp     *int                `json:"waist_size_jp"`
+	HipSizeJp       *int                `json:"hip_size_jp"`
 	BreastType      *BreastTypeEnum     `json:"breast_type"`
 	CareerStartYear *int                `json:"career_start_year"`
 	CareerEndYear   *int                `json:"career_end_year"`

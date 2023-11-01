@@ -77,10 +77,14 @@ fragment EditFragment on Edit {
       eye_color
       hair_color
       height
-      cup_size
-      band_size
-      waist_size
-      hip_size
+      cup_size_us
+      band_size_us
+      waist_size_us
+      hip_size_us
+      cup_size_jp
+      band_size_jp
+      waist_size_jp
+      hip_size_jp
       breast_type
       career_start_year
       career_end_year
@@ -194,10 +198,14 @@ fragment EditFragment on Edit {
       eye_color
       hair_color
       height
-      cup_size
-      band_size
-      waist_size
-      hip_size
+      cup_size_us
+      band_size_us
+      waist_size_us
+      hip_size_us
+      cup_size_jp
+      band_size_jp
+      waist_size_jp
+      hip_size_jp
       breast_type
       career_start_year
       career_end_year

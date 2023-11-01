@@ -108,10 +108,14 @@ export interface PerformerDetails {
   career_start_year?: number | null;
   career_end_year?: number | null;
   height?: number | null;
-  band_size?: number | null;
-  cup_size?: string | null;
-  waist_size?: number | null;
-  hip_size?: number | null;
+  band_size_us?: number | null;
+  cup_size_us?: string | null;
+  waist_size_us?: number | null;
+  hip_size_us?: number | null;
+  band_size_jp?: number | null;
+  cup_size_jp?: string | null;
+  waist_size_jp?: number | null;
+  hip_size_jp?: number | null;
   breast_type?: BreastTypeEnum | null;
   country?: string | null;
   ethnicity?: EthnicityEnum | null;
@@ -207,25 +211,47 @@ export const renderPerformerDetails = (
       showDiff={showDiff}
     />
     <ChangeRow
-      name="Bra Size"
-      newValue={`${performerDetails.band_size || ""}${
-        performerDetails.cup_size ?? ""
+      name="Bra Size US"
+      newValue={`${performerDetails.band_size_us || ""}${
+        performerDetails.cup_size_us ?? ""
       }`}
-      oldValue={`${oldPerformerDetails?.band_size || ""}${
-        oldPerformerDetails?.cup_size ?? ""
+      oldValue={`${oldPerformerDetails?.band_size_us || ""}${
+        oldPerformerDetails?.cup_size_us ?? ""
       }`}
       showDiff={showDiff}
     />
     <ChangeRow
-      name="Waist Size"
-      newValue={performerDetails.waist_size}
-      oldValue={oldPerformerDetails?.waist_size}
+      name="Waist Size US"
+      newValue={performerDetails.waist_size_us}
+      oldValue={oldPerformerDetails?.waist_size_us}
       showDiff={showDiff}
     />
     <ChangeRow
-      name="Hip Size"
-      newValue={performerDetails.hip_size}
-      oldValue={oldPerformerDetails?.hip_size}
+      name="Hip Size US"
+      newValue={performerDetails.hip_size_us}
+      oldValue={oldPerformerDetails?.hip_size_us}
+      showDiff={showDiff}
+    />
+    <ChangeRow
+      name="Bra Size JP"
+      newValue={`${performerDetails.band_size_jp || ""}${
+        performerDetails.cup_size_jp ?? ""
+      }`}
+      oldValue={`${oldPerformerDetails?.band_size_jp || ""}${
+        oldPerformerDetails?.cup_size_jp ?? ""
+      }`}
+      showDiff={showDiff}
+    />
+    <ChangeRow
+      name="Waist Size JP"
+      newValue={performerDetails.waist_size_jp}
+      oldValue={oldPerformerDetails?.waist_size_jp}
+      showDiff={showDiff}
+    />
+    <ChangeRow
+      name="Hip Size JP"
+      newValue={performerDetails.hip_size_jp}
+      oldValue={oldPerformerDetails?.hip_size_jp}
       showDiff={showDiff}
     />
     <ChangeRow

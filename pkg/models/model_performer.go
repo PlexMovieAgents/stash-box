@@ -20,10 +20,14 @@ type Performer struct {
 	EyeColor          sql.NullString `db:"eye_color" json:"eye_color"`
 	HairColor         sql.NullString `db:"hair_color" json:"hair_color"`
 	Height            sql.NullInt64  `db:"height" json:"height"`
-	CupSize           sql.NullString `db:"cup_size" json:"cup_size"`
-	BandSize          sql.NullInt64  `db:"band_size" json:"band_size"`
-	WaistSize         sql.NullInt64  `db:"waist_size" json:"waist_size"`
-	HipSize           sql.NullInt64  `db:"hip_size" json:"hip_size"`
+	CupSizeUS         sql.NullString `db:"cup_size_us" json:"cup_size_us"`
+	BandSizeUS        sql.NullInt64  `db:"band_size_us" json:"band_size_us"`
+	WaistSizeUS       sql.NullInt64  `db:"waist_size_us" json:"waist_size_us"`
+	HipSizeUS         sql.NullInt64  `db:"hip_size_us" json:"hip_size_us"`
+	CupSizeJP         sql.NullString `db:"cup_size_jp" json:"cup_size_jp"`
+	BandSizeJP        sql.NullInt64  `db:"band_size_jp" json:"band_size_jp"`
+	WaistSizeJP       sql.NullInt64  `db:"waist_size_jp" json:"waist_size_jp"`
+	HipSizeJP         sql.NullInt64  `db:"hip_size_jp" json:"hip_size_jp"`
 	BreastType        sql.NullString `db:"breast_type" json:"breast_type"`
 	CareerStartYear   sql.NullInt64  `db:"career_start_year" json:"career_start_year"`
 	CareerEndYear     sql.NullInt64  `db:"career_end_year" json:"career_end_year"`
@@ -305,19 +309,19 @@ func (p Performer) ResolveBirthdate() FuzzyDate {
 func (p Performer) ResolveMeasurements() Measurements {
 	ret := Measurements{}
 
-	if p.CupSize.Valid {
-		ret.CupSize = &p.CupSize.String
+	if p.CupSizeUS.Valid {
+		ret.CupSize = &p.CupSizeUS.String
 	}
-	if p.BandSize.Valid {
-		i := int(p.BandSize.Int64)
+	if p.BandSizeUS.Valid {
+		i := int(p.BandSizeUS.Int64)
 		ret.BandSize = &i
 	}
-	if p.HipSize.Valid {
-		i := int(p.HipSize.Int64)
+	if p.HipSizeUS.Valid {
+		i := int(p.HipSizeUS.Int64)
 		ret.Hip = &i
 	}
-	if p.WaistSize.Valid {
-		i := int(p.WaistSize.Int64)
+	if p.WaistSizeUS.Valid {
+		i := int(p.WaistSizeUS.Int64)
 		ret.Waist = &i
 	}
 
@@ -380,10 +384,14 @@ func (p *Performer) CopyFromPerformerEdit(input PerformerEdit, old PerformerEdit
 	fe.nullString(&p.BreastType, input.BreastType, old.BreastType)
 	fe.nullInt64(&p.CareerStartYear, input.CareerStartYear, old.CareerStartYear)
 	fe.nullInt64(&p.CareerEndYear, input.CareerEndYear, old.CareerEndYear)
-	fe.nullString(&p.CupSize, input.CupSize, old.CupSize)
-	fe.nullInt64(&p.BandSize, input.BandSize, old.BandSize)
-	fe.nullInt64(&p.HipSize, input.HipSize, old.HipSize)
-	fe.nullInt64(&p.WaistSize, input.WaistSize, old.WaistSize)
+	fe.nullString(&p.CupSizeUS, input.CupSizeUS, old.CupSizeUS)
+	fe.nullInt64(&p.BandSizeUS, input.BandSizeUS, old.BandSizeUS)
+	fe.nullInt64(&p.HipSizeUS, input.HipSizeUS, old.HipSizeUS)
+	fe.nullInt64(&p.WaistSizeUS, input.WaistSizeUS, old.WaistSizeUS)
+	fe.nullString(&p.CupSizeJP, input.CupSizeJP, old.CupSizeJP)
+	fe.nullInt64(&p.BandSizeJP, input.BandSizeJP, old.BandSizeJP)
+	fe.nullInt64(&p.HipSizeJP, input.HipSizeJP, old.HipSizeJP)
+	fe.nullInt64(&p.WaistSizeJP, input.WaistSizeJP, old.WaistSizeJP)
 	fe.sqlDate(&p.Birthdate, input.Birthdate, old.Birthdate)
 	fe.nullString(&p.BirthdateAccuracy, input.BirthdateAccuracy, old.BirthdateAccuracy)
 
@@ -404,10 +412,14 @@ func (p *Performer) ValidateModifyEdit(edit PerformerEditData) error {
 	v.string("breast type", edit.Old.BreastType, p.BreastType.String)
 	v.int64("career start year", edit.Old.CareerStartYear, p.CareerStartYear.Int64)
 	v.int64("career end year", edit.Old.CareerEndYear, p.CareerEndYear.Int64)
-	v.string("cup size", edit.Old.CupSize, p.CupSize.String)
-	v.int64("band size", edit.Old.BandSize, p.BandSize.Int64)
-	v.int64("hip size", edit.Old.HipSize, p.HipSize.Int64)
-	v.int64("waist size", edit.Old.WaistSize, p.WaistSize.Int64)
+	v.string("cup size us", edit.Old.CupSizeUS, p.CupSizeUS.String)
+	v.int64("band size us", edit.Old.BandSizeUS, p.BandSizeUS.Int64)
+	v.int64("hip size us", edit.Old.HipSizeUS, p.HipSizeUS.Int64)
+	v.int64("waist size us", edit.Old.WaistSizeUS, p.WaistSizeUS.Int64)
+	v.string("cup size jp", edit.Old.CupSizeJP, p.CupSizeJP.String)
+	v.int64("band size jp", edit.Old.BandSizeJP, p.BandSizeJP.Int64)
+	v.int64("hip size jp", edit.Old.HipSizeJP, p.HipSizeJP.Int64)
+	v.int64("waist size jp", edit.Old.WaistSizeJP, p.WaistSizeJP.Int64)
 	v.string("birthdate", edit.Old.Birthdate, p.Birthdate.String)
 	v.string("birthdate accuracy", edit.Old.BirthdateAccuracy, p.BirthdateAccuracy.String)
 

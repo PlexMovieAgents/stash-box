@@ -100,10 +100,14 @@ type Performer {
   """Height in cm"""
   height: Int
   measurements: Measurements! @deprecated(reason: "Use individual fields, cup/band/waist/hip_size")
-  cup_size: String
-  band_size: Int
-  waist_size: Int
-  hip_size: Int
+  cup_size_us: String
+  band_size_us: Int
+  waist_size_us: Int
+  hip_size_us: Int
+  cup_size_jp: String
+  band_size_jp: Int
+  waist_size_jp: Int
+  hip_size_jp: Int
   breast_type: BreastTypeEnum
   career_start_year: Int
   career_end_year: Int
@@ -149,10 +153,14 @@ input PerformerCreateInput {
   eye_color: EyeColorEnum
   hair_color: HairColorEnum
   height: Int
-  cup_size: String
-  band_size: Int
-  waist_size: Int
-  hip_size: Int
+  cup_size_us: String
+  band_size_us: Int
+  waist_size_us: Int
+  hip_size_us: Int
+  cup_size_jp: String
+  band_size_jp: Int
+  waist_size_jp: Int
+  hip_size_jp: Int
   breast_type: BreastTypeEnum
   career_start_year: Int
   career_end_year: Int
@@ -175,10 +183,14 @@ input PerformerUpdateInput {
   eye_color: EyeColorEnum
   hair_color: HairColorEnum
   height: Int
-  cup_size: String
-  band_size: Int
-  waist_size: Int
-  hip_size: Int
+  cup_size_us: String
+  band_size_us: Int
+  waist_size_us: Int
+  hip_size_us: Int
+  cup_size_jp: String
+  band_size_jp: Int
+  waist_size_jp: Int
+  hip_size_jp: Int
   breast_type: BreastTypeEnum
   career_start_year: Int
   career_end_year: Int
@@ -203,10 +215,14 @@ input PerformerEditDetailsInput {
   eye_color: EyeColorEnum
   hair_color: HairColorEnum
   height: Int
-  cup_size: String
-  band_size: Int
-  waist_size: Int
-  hip_size: Int
+  cup_size_us: String
+  band_size_us: Int
+  waist_size_us: Int
+  hip_size_us: Int
+  cup_size_jp: String
+  band_size_jp: Int
+  waist_size_jp: Int
+  hip_size_jp: Int
   breast_type: BreastTypeEnum
   career_start_year: Int
   career_end_year: Int
@@ -246,10 +262,14 @@ type PerformerEdit {
   hair_color: HairColorEnum
   """Height in cm"""
   height: Int
-  cup_size: String
-  band_size: Int
-  waist_size: Int
-  hip_size: Int
+  cup_size_us: String
+  band_size_us: Int
+  waist_size_us: Int
+  hip_size_us: Int
+  cup_size_jp: String
+  band_size_jp: Int
+  waist_size_jp: Int
+  hip_size_jp: Int
   breast_type: BreastTypeEnum
   career_start_year: Int
   career_end_year: Int
@@ -339,10 +359,15 @@ input PerformerQueryInput {
   hair_color: HairColorCriterionInput
   height: IntCriterionInput
 
-  cup_size: StringCriterionInput
-  band_size: IntCriterionInput
-  waist_size: IntCriterionInput
-  hip_size: IntCriterionInput
+  cup_size_us: StringCriterionInput
+  band_size_us: IntCriterionInput
+  waist_size_us: IntCriterionInput
+  hip_size_us: IntCriterionInput
+
+  cup_size_jp: StringCriterionInput
+  band_size_jp: IntCriterionInput
+  waist_size_jp: IntCriterionInput
+  hip_size_jp: IntCriterionInput
 
   breast_type: BreastTypeCriterionInput
 

@@ -79,17 +79,30 @@ func (e PerformerEditDetailsInput) PerformerEditFromDiff(orig Performer, inputAr
 		oldData.Height, newData.Height = ed.nullInt64(orig.Height, e.Height)
 	}
 
-	if e.CupSize != nil || inputArgs.Field("cup_size").IsNull() {
-		oldData.CupSize, newData.CupSize = ed.nullString(orig.CupSize, e.CupSize)
+	if e.CupSizeUs != nil || inputArgs.Field("cup_size_us").IsNull() {
+		oldData.CupSizeUS, newData.CupSizeUS = ed.nullString(orig.CupSizeUS, e.CupSizeUs)
 	}
-	if e.BandSize != nil || inputArgs.Field("band_size").IsNull() {
-		oldData.BandSize, newData.BandSize = ed.nullInt64(orig.BandSize, e.BandSize)
+	if e.BandSizeUs != nil || inputArgs.Field("band_size_us").IsNull() {
+		oldData.BandSizeUS, newData.BandSizeUS = ed.nullInt64(orig.BandSizeUS, e.BandSizeUs)
 	}
-	if e.WaistSize != nil || inputArgs.Field("waist_size").IsNull() {
-		oldData.WaistSize, newData.WaistSize = ed.nullInt64(orig.WaistSize, e.WaistSize)
+	if e.WaistSizeUs != nil || inputArgs.Field("waist_size_us").IsNull() {
+		oldData.WaistSizeUS, newData.WaistSizeUS = ed.nullInt64(orig.WaistSizeUS, e.WaistSizeUs)
 	}
-	if e.HipSize != nil || inputArgs.Field("hip_size").IsNull() {
-		oldData.HipSize, newData.HipSize = ed.nullInt64(orig.HipSize, e.HipSize)
+	if e.HipSizeUs != nil || inputArgs.Field("hip_size_us").IsNull() {
+		oldData.HipSizeUS, newData.HipSizeUS = ed.nullInt64(orig.HipSizeUS, e.HipSizeUs)
+	}
+
+	if e.CupSizeJp != nil || inputArgs.Field("cup_size_jp").IsNull() {
+		oldData.CupSizeJP, newData.CupSizeJP = ed.nullString(orig.CupSizeJP, e.CupSizeJp)
+	}
+	if e.BandSizeJp != nil || inputArgs.Field("band_size_jp").IsNull() {
+		oldData.BandSizeJP, newData.BandSizeJP = ed.nullInt64(orig.BandSizeJP, e.BandSizeJp)
+	}
+	if e.WaistSizeJp != nil || inputArgs.Field("waist_size_jp").IsNull() {
+		oldData.WaistSizeJP, newData.WaistSizeJP = ed.nullInt64(orig.WaistSizeJP, e.WaistSizeJp)
+	}
+	if e.HipSizeJp != nil || inputArgs.Field("hip_size_jp").IsNull() {
+		oldData.HipSizeJP, newData.HipSizeJP = ed.nullInt64(orig.HipSizeJP, e.HipSizeJp)
 	}
 
 	if e.BreastType != nil || inputArgs.Field("breast_type").IsNull() {

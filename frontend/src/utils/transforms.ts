@@ -7,20 +7,45 @@ export const formatCareer = (
   start || end ? `Active ${start ?? "????"}\u2013${end ?? ""}` : undefined;
 
 export const formatMeasurements = ({
-  cup_size,
-  band_size,
-  hip_size,
-  waist_size,
+  cup_size_us,
+  band_size_us,
+  hip_size_us,
+  waist_size_us,
+  cup_size_jp,
+  band_size_jp,
+  hip_size_jp,
+  waist_size_jp
 }: {
-  cup_size?: string | null;
-  band_size?: number | null;
-  waist_size?: number | null;
-  hip_size?: number | null;
+  cup_size_us?: string | null;
+  band_size_us?: number | null;
+  waist_size_us?: number | null;
+  hip_size_us?: number | null;
+  cup_size_jp?: string | null;
+  band_size_jp?: number | null;
+  waist_size_jp?: number | null;
+  hip_size_jp?: number | null;
 }): string | undefined => {
-  if ((cup_size && band_size) || hip_size || waist_size) {
-    const bust = cup_size && band_size ? `${band_size}${cup_size}` : "??";
-    return `${bust}-${waist_size ?? "??"}-${hip_size ?? "??"}`;
+  let size_jp = undefined
+  if ((cup_size_jp && band_size_jp) || hip_size_jp || waist_size_jp) {
+    const bust = cup_size_jp && band_size_jp ? `${band_size_jp}${cup_size_jp}` : "??";
+    size_jp = `${bust}-${waist_size_jp ?? "??"}-${hip_size_jp ?? "??"}`;
   }
+  let size_us = undefined
+  if ((cup_size_us && band_size_us) || hip_size_us || waist_size_us) {
+    const bust = cup_size_us && band_size_us ? `${band_size_us}${cup_size_us}` : "??";
+    size_us = `${bust}-${waist_size_us ?? "??"}-${hip_size_us ?? "??"}`;
+  }
+
+  if (size_us && size_jp) {
+    return `JP ${size_jp} (US ${size_us})`
+  }
+  if (size_jp) {
+    return `JP ${size_jp}`
+  }
+  if (size_us) {
+    return `US ${size_us}`
+  }
+
   return undefined;
 };
 

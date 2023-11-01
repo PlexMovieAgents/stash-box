@@ -163,12 +163,18 @@ const PerformerForm: FC<PerformerProps> = ({
         BREAST,
         initial?.breast_type ?? performer?.breast_type ?? null
       ),
-      braSize: getBraSize(
-        initial?.cup_size ?? performer?.cup_size,
-        initial?.band_size ?? performer?.band_size
+      braSizeUS: getBraSize(
+        initial?.cup_size_us ?? performer?.cup_size_us,
+        initial?.band_size_us ?? performer?.band_size_us
       ),
-      waistSize: initial?.waist_size ?? performer?.waist_size,
-      hipSize: initial?.hip_size ?? performer?.hip_size,
+      braSizeJP: getBraSize(
+        initial?.cup_size_jp ?? performer?.cup_size_jp,
+        initial?.band_size_jp ?? performer?.band_size_jp
+      ),
+      waistSizeUS: initial?.waist_size_us ?? performer?.waist_size_us,
+      hipSizeUS: initial?.hip_size_us?? performer?.hip_size_us,
+      waistSizeJP: initial?.waist_size_jp ?? performer?.waist_size_jp,
+      hipSizeJP: initial?.hip_size_jp?? performer?.hip_size_jp,
       country: initial?.country ?? performer?.country ?? "",
       ethnicity: getEnumValue(
         ETHNICITY,
@@ -235,8 +241,10 @@ const PerformerForm: FC<PerformerProps> = ({
       career_start_year: data.career_start_year,
       career_end_year: data.career_end_year,
       height: data.height,
-      waist_size: data.waistSize,
-      hip_size: data.hipSize,
+      waist_size_us: data.waistSizeUS,
+      hip_size_us: data.hipSizeUS,
+      waist_size_jp: data.waistSizeJP,
+      hip_size_jp: data.hipSizeJP,
       ethnicity:
         EthnicityEnum[data.ethnicity as keyof typeof EthnicityEnum] || null,
       country: data.country,
@@ -252,10 +260,15 @@ const PerformerForm: FC<PerformerProps> = ({
       })),
     };
 
-    if (data.braSize != null) {
-      const [cupSize, bandSize] = parseBraSize(data.braSize);
-      performerData.cup_size = cupSize;
-      performerData.band_size = bandSize ?? 0;
+    if (data.braSizeUS != null) {
+      const [cupSize, bandSize] = parseBraSize(data.braSizeUS);
+      performerData.cup_size_us = cupSize;
+      performerData.band_size_us = bandSize ?? 0;
+    }
+    if (data.braSizeJP != null) {
+      const [cupSize, bandSize] = parseBraSize(data.braSizeJP);
+      performerData.cup_size_jp = cupSize;
+      performerData.band_size_jp = bandSize ?? 0;
     }
 
     if (
@@ -293,8 +306,12 @@ const PerformerForm: FC<PerformerProps> = ({
     { error: errors.career_start_year?.message, tab: "personal" },
     { error: errors.career_end_year?.message, tab: "personal" },
     { error: errors.height?.message, tab: "personal" },
-    { error: errors.braSize?.message, tab: "personal" },
-    { error: errors.waistSize?.message, tab: "personal" },
+    { error: errors.braSizeUS?.message, tab: "personal" },
+    { error: errors.waistSizeUS?.message, tab: "personal" },
+    { error: errors.hipSizeUS?.message, tab: "personal" },
+    { error: errors.braSizeJP?.message, tab: "personal" },
+    { error: errors.waistSizeJP?.message, tab: "personal" },
+    { error: errors.hipSizeJP?.message, tab: "personal" },
     {
       error: errors.urls?.find?.((u) => u?.url?.message)?.url?.message,
       tab: "links",
@@ -465,44 +482,88 @@ const PerformerForm: FC<PerformerProps> = ({
 
           {showBreastType && (
             <Row>
-              <Form.Group controlId="braSize" className="col-4 mb-3">
-                <Form.Label>Bra size</Form.Label>
+              <Form.Group controlId="braSizeUS" className="col-4 mb-3">
+                <Form.Label>US Bra size</Form.Label>
                 <Form.Control
-                  className={cx({ "is-invalid": errors.braSize })}
-                  {...register("braSize")}
+                  className={cx({ "is-invalid": errors.braSizeUS })}
+                  {...register("braSizeUS")}
                 />
                 <Form.Control.Feedback type="invalid">
-                  {errors?.braSize?.message}
+                  {errors?.braSizeUS?.message}
                 </Form.Control.Feedback>
                 <Form.Text>US Bra Size</Form.Text>
               </Form.Group>
 
-              <Form.Group controlId="waistSize" className="col-4 mb-3">
+              <Form.Group controlId="waistSizeUS" className="col-4 mb-3">
                 <Form.Label>Waist size</Form.Label>
                 <Form.Control
-                  className={cx({ "is-invalid": errors.waistSize })}
+                  className={cx({ "is-invalid": errors.waistSizeUS })}
                   type="number"
                   onWheel={handleNumberInputWheel}
-                  {...register("waistSize")}
+                  {...register("waistSizeUS")}
                 />
                 <Form.Control.Feedback type="invalid">
-                  {errors?.waistSize?.message}
+                  {errors?.waistSizeUS?.message}
                 </Form.Control.Feedback>
                 <Form.Text>Waist circumference in inches</Form.Text>
               </Form.Group>
 
-              <Form.Group controlId="hipSize" className="col-4 mb-3">
+              <Form.Group controlId="hipSizeUS" className="col-4 mb-3">
                 <Form.Label>Hip size</Form.Label>
                 <Form.Control
-                  className={cx({ "is-invalid": errors.hipSize })}
+                  className={cx({ "is-invalid": errors.hipSizeUS })}
                   type="number"
                   onWheel={handleNumberInputWheel}
-                  {...register("hipSize")}
+                  {...register("hipSizeUS")}
                 />
                 <Form.Control.Feedback type="invalid">
-                  {errors?.hipSize?.message}
+                  {errors?.hipSizeUS?.message}
                 </Form.Control.Feedback>
                 <Form.Text>Hip circumference in inches</Form.Text>
+              </Form.Group>
+            </Row>
+          )}
+
+          {showBreastType && (
+            <Row>
+              <Form.Group controlId="braSizeJP" className="col-4 mb-3">
+                <Form.Label>JP Bra size</Form.Label>
+                <Form.Control
+                  className={cx({ "is-invalid": errors.braSizeJP })}
+                  {...register("braSizeJP")}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors?.braSizeJP?.message}
+                </Form.Control.Feedback>
+                <Form.Text>JP Bra Size</Form.Text>
+              </Form.Group>
+
+              <Form.Group controlId="waistSizeUS" className="col-4 mb-3">
+                <Form.Label>Waist size</Form.Label>
+                <Form.Control
+                  className={cx({ "is-invalid": errors.waistSizeJP })}
+                  type="number"
+                  onWheel={handleNumberInputWheel}
+                  {...register("waistSizeJP")}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors?.waistSizeJP?.message}
+                </Form.Control.Feedback>
+                <Form.Text>Waist circumference in centimeters</Form.Text>
+              </Form.Group>
+
+              <Form.Group controlId="hipSizeJP" className="col-4 mb-3">
+                <Form.Label>Hip size</Form.Label>
+                <Form.Control
+                  className={cx({ "is-invalid": errors.hipSizeJP })}
+                  type="number"
+                  onWheel={handleNumberInputWheel}
+                  {...register("hipSizeJP")}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors?.hipSizeJP?.message}
+                </Form.Control.Feedback>
+                <Form.Text>Hip circumference in centimeters</Form.Text>
               </Form.Group>
             </Row>
           )}

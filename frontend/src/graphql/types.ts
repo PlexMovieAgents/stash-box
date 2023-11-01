@@ -716,7 +716,8 @@ export type Performer = {
   __typename: "Performer";
   age?: Maybe<Scalars["Int"]>;
   aliases: Array<Scalars["String"]>;
-  band_size?: Maybe<Scalars["Int"]>;
+  band_size_jp?: Maybe<Scalars["Int"]>;
+  band_size_us?: Maybe<Scalars["Int"]>;
   birth_date?: Maybe<Scalars["String"]>;
   /** @deprecated Please use `birth_date` */
   birthdate?: Maybe<FuzzyDate>;
@@ -725,7 +726,8 @@ export type Performer = {
   career_start_year?: Maybe<Scalars["Int"]>;
   country?: Maybe<Scalars["String"]>;
   created: Scalars["Time"];
-  cup_size?: Maybe<Scalars["String"]>;
+  cup_size_jp?: Maybe<Scalars["String"]>;
+  cup_size_us?: Maybe<Scalars["String"]>;
   deleted: Scalars["Boolean"];
   disambiguation?: Maybe<Scalars["String"]>;
   edits: Array<Edit>;
@@ -735,7 +737,8 @@ export type Performer = {
   hair_color?: Maybe<HairColorEnum>;
   /** Height in cm */
   height?: Maybe<Scalars["Int"]>;
-  hip_size?: Maybe<Scalars["Int"]>;
+  hip_size_jp?: Maybe<Scalars["Int"]>;
+  hip_size_us?: Maybe<Scalars["Int"]>;
   id: Scalars["ID"];
   images: Array<Image>;
   is_favorite: Scalars["Boolean"];
@@ -750,7 +753,8 @@ export type Performer = {
   tattoos?: Maybe<Array<BodyModification>>;
   updated: Scalars["Time"];
   urls: Array<Url>;
-  waist_size?: Maybe<Scalars["Int"]>;
+  waist_size_jp?: Maybe<Scalars["Int"]>;
+  waist_size_us?: Maybe<Scalars["Int"]>;
 };
 
 export type PerformerScenesArgs = {
@@ -772,13 +776,15 @@ export type PerformerAppearanceInput = {
 
 export type PerformerCreateInput = {
   aliases?: InputMaybe<Array<Scalars["String"]>>;
-  band_size?: InputMaybe<Scalars["Int"]>;
+  band_size_jp?: InputMaybe<Scalars["Int"]>;
+  band_size_us?: InputMaybe<Scalars["Int"]>;
   birthdate?: InputMaybe<Scalars["String"]>;
   breast_type?: InputMaybe<BreastTypeEnum>;
   career_end_year?: InputMaybe<Scalars["Int"]>;
   career_start_year?: InputMaybe<Scalars["Int"]>;
   country?: InputMaybe<Scalars["String"]>;
-  cup_size?: InputMaybe<Scalars["String"]>;
+  cup_size_jp?: InputMaybe<Scalars["String"]>;
+  cup_size_us?: InputMaybe<Scalars["String"]>;
   disambiguation?: InputMaybe<Scalars["String"]>;
   draft_id?: InputMaybe<Scalars["ID"]>;
   ethnicity?: InputMaybe<EthnicityEnum>;
@@ -786,13 +792,15 @@ export type PerformerCreateInput = {
   gender?: InputMaybe<GenderEnum>;
   hair_color?: InputMaybe<HairColorEnum>;
   height?: InputMaybe<Scalars["Int"]>;
-  hip_size?: InputMaybe<Scalars["Int"]>;
+  hip_size_jp?: InputMaybe<Scalars["Int"]>;
+  hip_size_us?: InputMaybe<Scalars["Int"]>;
   image_ids?: InputMaybe<Array<Scalars["ID"]>>;
   name: Scalars["String"];
   piercings?: InputMaybe<Array<BodyModificationInput>>;
   tattoos?: InputMaybe<Array<BodyModificationInput>>;
   urls?: InputMaybe<Array<UrlInput>>;
-  waist_size?: InputMaybe<Scalars["Int"]>;
+  waist_size_jp?: InputMaybe<Scalars["Int"]>;
+  waist_size_us?: InputMaybe<Scalars["Int"]>;
 };
 
 export type PerformerDestroyInput = {
@@ -850,13 +858,15 @@ export type PerformerEdit = {
   added_tattoos?: Maybe<Array<BodyModification>>;
   added_urls?: Maybe<Array<Url>>;
   aliases: Array<Scalars["String"]>;
-  band_size?: Maybe<Scalars["Int"]>;
+  band_size_jp?: Maybe<Scalars["Int"]>;
+  band_size_us?: Maybe<Scalars["Int"]>;
   birthdate?: Maybe<Scalars["String"]>;
   breast_type?: Maybe<BreastTypeEnum>;
   career_end_year?: Maybe<Scalars["Int"]>;
   career_start_year?: Maybe<Scalars["Int"]>;
   country?: Maybe<Scalars["String"]>;
-  cup_size?: Maybe<Scalars["String"]>;
+  cup_size_jp?: Maybe<Scalars["String"]>;
+  cup_size_us?: Maybe<Scalars["String"]>;
   disambiguation?: Maybe<Scalars["String"]>;
   draft_id?: Maybe<Scalars["ID"]>;
   ethnicity?: Maybe<EthnicityEnum>;
@@ -865,7 +875,8 @@ export type PerformerEdit = {
   hair_color?: Maybe<HairColorEnum>;
   /** Height in cm */
   height?: Maybe<Scalars["Int"]>;
-  hip_size?: Maybe<Scalars["Int"]>;
+  hip_size_jp?: Maybe<Scalars["Int"]>;
+  hip_size_us?: Maybe<Scalars["Int"]>;
   images: Array<Image>;
   name?: Maybe<Scalars["String"]>;
   piercings: Array<BodyModification>;
@@ -876,18 +887,21 @@ export type PerformerEdit = {
   removed_urls?: Maybe<Array<Url>>;
   tattoos: Array<BodyModification>;
   urls: Array<Url>;
-  waist_size?: Maybe<Scalars["Int"]>;
+  waist_size_jp?: Maybe<Scalars["Int"]>;
+  waist_size_us?: Maybe<Scalars["Int"]>;
 };
 
 export type PerformerEditDetailsInput = {
   aliases?: InputMaybe<Array<Scalars["String"]>>;
-  band_size?: InputMaybe<Scalars["Int"]>;
+  band_size_jp?: InputMaybe<Scalars["Int"]>;
+  band_size_us?: InputMaybe<Scalars["Int"]>;
   birthdate?: InputMaybe<Scalars["String"]>;
   breast_type?: InputMaybe<BreastTypeEnum>;
   career_end_year?: InputMaybe<Scalars["Int"]>;
   career_start_year?: InputMaybe<Scalars["Int"]>;
   country?: InputMaybe<Scalars["String"]>;
-  cup_size?: InputMaybe<Scalars["String"]>;
+  cup_size_jp?: InputMaybe<Scalars["String"]>;
+  cup_size_us?: InputMaybe<Scalars["String"]>;
   disambiguation?: InputMaybe<Scalars["String"]>;
   draft_id?: InputMaybe<Scalars["ID"]>;
   ethnicity?: InputMaybe<EthnicityEnum>;
@@ -895,13 +909,15 @@ export type PerformerEditDetailsInput = {
   gender?: InputMaybe<GenderEnum>;
   hair_color?: InputMaybe<HairColorEnum>;
   height?: InputMaybe<Scalars["Int"]>;
-  hip_size?: InputMaybe<Scalars["Int"]>;
+  hip_size_jp?: InputMaybe<Scalars["Int"]>;
+  hip_size_us?: InputMaybe<Scalars["Int"]>;
   image_ids?: InputMaybe<Array<Scalars["ID"]>>;
   name?: InputMaybe<Scalars["String"]>;
   piercings?: InputMaybe<Array<BodyModificationInput>>;
   tattoos?: InputMaybe<Array<BodyModificationInput>>;
   urls?: InputMaybe<Array<UrlInput>>;
-  waist_size?: InputMaybe<Scalars["Int"]>;
+  waist_size_jp?: InputMaybe<Scalars["Int"]>;
+  waist_size_us?: InputMaybe<Scalars["Int"]>;
 };
 
 export type PerformerEditInput = {
@@ -931,14 +947,16 @@ export type PerformerQueryInput = {
   age?: InputMaybe<IntCriterionInput>;
   /** Search aliases only - assumes like query unless quoted */
   alias?: InputMaybe<Scalars["String"]>;
-  band_size?: InputMaybe<IntCriterionInput>;
+  band_size_jp?: InputMaybe<IntCriterionInput>;
+  band_size_us?: InputMaybe<IntCriterionInput>;
   birth_year?: InputMaybe<IntCriterionInput>;
   birthdate?: InputMaybe<DateCriterionInput>;
   breast_type?: InputMaybe<BreastTypeCriterionInput>;
   career_end_year?: InputMaybe<IntCriterionInput>;
   career_start_year?: InputMaybe<IntCriterionInput>;
   country?: InputMaybe<StringCriterionInput>;
-  cup_size?: InputMaybe<StringCriterionInput>;
+  cup_size_jp?: InputMaybe<StringCriterionInput>;
+  cup_size_us?: InputMaybe<StringCriterionInput>;
   direction?: SortDirectionEnum;
   disambiguation?: InputMaybe<StringCriterionInput>;
   ethnicity?: InputMaybe<EthnicityFilterEnum>;
@@ -946,7 +964,8 @@ export type PerformerQueryInput = {
   gender?: InputMaybe<GenderFilterEnum>;
   hair_color?: InputMaybe<HairColorCriterionInput>;
   height?: InputMaybe<IntCriterionInput>;
-  hip_size?: InputMaybe<IntCriterionInput>;
+  hip_size_jp?: InputMaybe<IntCriterionInput>;
+  hip_size_us?: InputMaybe<IntCriterionInput>;
   /** Filter by performerfavorite status for the current user */
   is_favorite?: InputMaybe<Scalars["Boolean"]>;
   /** Searches name only - assumes like query unless quoted */
@@ -964,7 +983,8 @@ export type PerformerQueryInput = {
   tattoos?: InputMaybe<BodyModificationCriterionInput>;
   /** Filter to search urls - assumes like query unless quoted */
   url?: InputMaybe<Scalars["String"]>;
-  waist_size?: InputMaybe<IntCriterionInput>;
+  waist_size_jp?: InputMaybe<IntCriterionInput>;
+  waist_size_us?: InputMaybe<IntCriterionInput>;
 };
 
 export type PerformerScenesInput = {
@@ -995,27 +1015,31 @@ export type PerformerStudio = {
 
 export type PerformerUpdateInput = {
   aliases?: InputMaybe<Array<Scalars["String"]>>;
-  band_size?: InputMaybe<Scalars["Int"]>;
+  band_size_jp?: InputMaybe<Scalars["Int"]>;
+  band_size_us?: InputMaybe<Scalars["Int"]>;
   birthdate?: InputMaybe<Scalars["String"]>;
   breast_type?: InputMaybe<BreastTypeEnum>;
   career_end_year?: InputMaybe<Scalars["Int"]>;
   career_start_year?: InputMaybe<Scalars["Int"]>;
   country?: InputMaybe<Scalars["String"]>;
-  cup_size?: InputMaybe<Scalars["String"]>;
+  cup_size_jp?: InputMaybe<Scalars["String"]>;
+  cup_size_us?: InputMaybe<Scalars["String"]>;
   disambiguation?: InputMaybe<Scalars["String"]>;
   ethnicity?: InputMaybe<EthnicityEnum>;
   eye_color?: InputMaybe<EyeColorEnum>;
   gender?: InputMaybe<GenderEnum>;
   hair_color?: InputMaybe<HairColorEnum>;
   height?: InputMaybe<Scalars["Int"]>;
-  hip_size?: InputMaybe<Scalars["Int"]>;
+  hip_size_jp?: InputMaybe<Scalars["Int"]>;
+  hip_size_us?: InputMaybe<Scalars["Int"]>;
   id: Scalars["ID"];
   image_ids?: InputMaybe<Array<Scalars["ID"]>>;
   name?: InputMaybe<Scalars["String"]>;
   piercings?: InputMaybe<Array<BodyModificationInput>>;
   tattoos?: InputMaybe<Array<BodyModificationInput>>;
   urls?: InputMaybe<Array<UrlInput>>;
-  waist_size?: InputMaybe<Scalars["Int"]>;
+  waist_size_jp?: InputMaybe<Scalars["Int"]>;
+  waist_size_us?: InputMaybe<Scalars["Int"]>;
 };
 
 /** The query root for this schema */
@@ -1923,10 +1947,14 @@ export type EditFragment = {
         career_end_year?: number | null;
         career_start_year?: number | null;
         breast_type?: BreastTypeEnum | null;
-        waist_size?: number | null;
-        hip_size?: number | null;
-        band_size?: number | null;
-        cup_size?: string | null;
+        waist_size_us?: number | null;
+        hip_size_us?: number | null;
+        band_size_us?: number | null;
+        cup_size_us?: string | null;
+        waist_size_jp?: number | null;
+        hip_size_jp?: number | null;
+        band_size_jp?: number | null;
+        cup_size_jp?: string | null;
         is_favorite: boolean;
         tattoos?: Array<{
           __typename: "BodyModification";
@@ -2063,10 +2091,14 @@ export type EditFragment = {
         eye_color?: EyeColorEnum | null;
         hair_color?: HairColorEnum | null;
         height?: number | null;
-        cup_size?: string | null;
-        band_size?: number | null;
-        waist_size?: number | null;
-        hip_size?: number | null;
+        cup_size_us?: string | null;
+        band_size_us?: number | null;
+        waist_size_us?: number | null;
+        hip_size_us?: number | null;
+        cup_size_jp?: string | null;
+        band_size_jp?: number | null;
+        waist_size_jp?: number | null;
+        hip_size_jp?: number | null;
         breast_type?: BreastTypeEnum | null;
         career_start_year?: number | null;
         career_end_year?: number | null;
@@ -2186,10 +2218,14 @@ export type EditFragment = {
             career_end_year?: number | null;
             career_start_year?: number | null;
             breast_type?: BreastTypeEnum | null;
-            waist_size?: number | null;
-            hip_size?: number | null;
-            band_size?: number | null;
-            cup_size?: string | null;
+            waist_size_us?: number | null;
+            hip_size_us?: number | null;
+            band_size_us?: number | null;
+            cup_size_us?: string | null;
+            waist_size_jp?: number | null;
+            hip_size_jp?: number | null;
+            band_size_jp?: number | null;
+            cup_size_jp?: string | null;
             is_favorite: boolean;
             tattoos?: Array<{
               __typename: "BodyModification";
@@ -2241,10 +2277,14 @@ export type EditFragment = {
             career_end_year?: number | null;
             career_start_year?: number | null;
             breast_type?: BreastTypeEnum | null;
-            waist_size?: number | null;
-            hip_size?: number | null;
-            band_size?: number | null;
-            cup_size?: string | null;
+            waist_size_us?: number | null;
+            hip_size_us?: number | null;
+            band_size_us?: number | null;
+            cup_size_us?: string | null;
+            waist_size_jp?: number | null;
+            hip_size_jp?: number | null;
+            band_size_jp?: number | null;
+            cup_size_jp?: string | null;
             is_favorite: boolean;
             tattoos?: Array<{
               __typename: "BodyModification";
@@ -2411,10 +2451,14 @@ export type EditFragment = {
         eye_color?: EyeColorEnum | null;
         hair_color?: HairColorEnum | null;
         height?: number | null;
-        cup_size?: string | null;
-        band_size?: number | null;
-        waist_size?: number | null;
-        hip_size?: number | null;
+        cup_size_us?: string | null;
+        band_size_us?: number | null;
+        waist_size_us?: number | null;
+        hip_size_us?: number | null;
+        cup_size_jp?: string | null;
+        band_size_jp?: number | null;
+        waist_size_jp?: number | null;
+        hip_size_jp?: number | null;
         breast_type?: BreastTypeEnum | null;
         career_start_year?: number | null;
         career_end_year?: number | null;
@@ -2488,10 +2532,14 @@ export type EditFragment = {
             career_end_year?: number | null;
             career_start_year?: number | null;
             breast_type?: BreastTypeEnum | null;
-            waist_size?: number | null;
-            hip_size?: number | null;
-            band_size?: number | null;
-            cup_size?: string | null;
+            waist_size_us?: number | null;
+            hip_size_us?: number | null;
+            band_size_us?: number | null;
+            cup_size_us?: string | null;
+            waist_size_jp?: number | null;
+            hip_size_jp?: number | null;
+            band_size_jp?: number | null;
+            cup_size_jp?: string | null;
             is_favorite: boolean;
             tattoos?: Array<{
               __typename: "BodyModification";
@@ -2543,10 +2591,14 @@ export type EditFragment = {
             career_end_year?: number | null;
             career_start_year?: number | null;
             breast_type?: BreastTypeEnum | null;
-            waist_size?: number | null;
-            hip_size?: number | null;
-            band_size?: number | null;
-            cup_size?: string | null;
+            waist_size_us?: number | null;
+            hip_size_us?: number | null;
+            band_size_us?: number | null;
+            cup_size_us?: string | null;
+            waist_size_jp?: number | null;
+            hip_size_jp?: number | null;
+            band_size_jp?: number | null;
+            cup_size_jp?: string | null;
             is_favorite: boolean;
             tattoos?: Array<{
               __typename: "BodyModification";
@@ -2694,10 +2746,14 @@ export type EditFragment = {
         career_end_year?: number | null;
         career_start_year?: number | null;
         breast_type?: BreastTypeEnum | null;
-        waist_size?: number | null;
-        hip_size?: number | null;
-        band_size?: number | null;
-        cup_size?: string | null;
+        waist_size_us?: number | null;
+        hip_size_us?: number | null;
+        band_size_us?: number | null;
+        cup_size_us?: string | null;
+        waist_size_jp?: number | null;
+        hip_size_jp?: number | null;
+        band_size_jp?: number | null;
+        cup_size_jp?: string | null;
         is_favorite: boolean;
         tattoos?: Array<{
           __typename: "BodyModification";
@@ -2860,10 +2916,14 @@ export type PerformerFragment = {
   career_end_year?: number | null;
   career_start_year?: number | null;
   breast_type?: BreastTypeEnum | null;
-  waist_size?: number | null;
-  hip_size?: number | null;
-  band_size?: number | null;
-  cup_size?: string | null;
+  waist_size_us?: number | null;
+  hip_size_us?: number | null;
+  band_size_us?: number | null;
+  cup_size_us?: string | null;
+  waist_size_jp?: number | null;
+  hip_size_jp?: number | null;
+  band_size_jp?: number | null;
+  cup_size_jp?: string | null;
   is_favorite: boolean;
   tattoos?: Array<{
     __typename: "BodyModification";
@@ -3246,10 +3306,14 @@ export type ApplyEditMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -3401,10 +3465,14 @@ export type ApplyEditMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -3544,10 +3612,14 @@ export type ApplyEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -3599,10 +3671,14 @@ export type ApplyEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -3779,10 +3855,14 @@ export type ApplyEditMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -3866,10 +3946,14 @@ export type ApplyEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -3921,10 +4005,14 @@ export type ApplyEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -4072,10 +4160,14 @@ export type ApplyEditMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -4456,10 +4548,14 @@ export type PerformerEditMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -4611,10 +4707,14 @@ export type PerformerEditMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -4754,10 +4854,14 @@ export type PerformerEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -4809,10 +4913,14 @@ export type PerformerEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -4989,10 +5097,14 @@ export type PerformerEditMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -5076,10 +5188,14 @@ export type PerformerEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -5131,10 +5247,14 @@ export type PerformerEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -5282,10 +5402,14 @@ export type PerformerEditMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -5485,10 +5609,14 @@ export type PerformerEditUpdateMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -5640,10 +5768,14 @@ export type PerformerEditUpdateMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -5783,10 +5915,14 @@ export type PerformerEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -5838,10 +5974,14 @@ export type PerformerEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -6018,10 +6158,14 @@ export type PerformerEditUpdateMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -6105,10 +6249,14 @@ export type PerformerEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -6160,10 +6308,14 @@ export type PerformerEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -6311,10 +6463,14 @@ export type PerformerEditUpdateMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -6549,10 +6705,14 @@ export type SceneEditMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -6704,10 +6864,14 @@ export type SceneEditMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -6847,10 +7011,14 @@ export type SceneEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -6902,10 +7070,14 @@ export type SceneEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -7082,10 +7254,14 @@ export type SceneEditMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -7169,10 +7345,14 @@ export type SceneEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -7224,10 +7404,14 @@ export type SceneEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -7375,10 +7559,14 @@ export type SceneEditMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -7578,10 +7766,14 @@ export type SceneEditUpdateMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -7733,10 +7925,14 @@ export type SceneEditUpdateMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -7876,10 +8072,14 @@ export type SceneEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -7931,10 +8131,14 @@ export type SceneEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -8111,10 +8315,14 @@ export type SceneEditUpdateMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -8198,10 +8406,14 @@ export type SceneEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -8253,10 +8465,14 @@ export type SceneEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -8404,10 +8620,14 @@ export type SceneEditUpdateMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -8606,10 +8826,14 @@ export type StudioEditMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -8761,10 +8985,14 @@ export type StudioEditMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -8904,10 +9132,14 @@ export type StudioEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -8959,10 +9191,14 @@ export type StudioEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -9139,10 +9375,14 @@ export type StudioEditMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -9226,10 +9466,14 @@ export type StudioEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -9281,10 +9525,14 @@ export type StudioEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -9432,10 +9680,14 @@ export type StudioEditMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -9635,10 +9887,14 @@ export type StudioEditUpdateMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -9790,10 +10046,14 @@ export type StudioEditUpdateMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -9933,10 +10193,14 @@ export type StudioEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -9988,10 +10252,14 @@ export type StudioEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -10168,10 +10436,14 @@ export type StudioEditUpdateMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -10255,10 +10527,14 @@ export type StudioEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -10310,10 +10586,14 @@ export type StudioEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -10461,10 +10741,14 @@ export type StudioEditUpdateMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -10663,10 +10947,14 @@ export type TagEditMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -10818,10 +11106,14 @@ export type TagEditMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -10961,10 +11253,14 @@ export type TagEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -11016,10 +11312,14 @@ export type TagEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -11196,10 +11496,14 @@ export type TagEditMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -11283,10 +11587,14 @@ export type TagEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -11338,10 +11646,14 @@ export type TagEditMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -11489,10 +11801,14 @@ export type TagEditMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -11692,10 +12008,14 @@ export type TagEditUpdateMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -11847,10 +12167,14 @@ export type TagEditUpdateMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -11990,10 +12314,14 @@ export type TagEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -12045,10 +12373,14 @@ export type TagEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -12225,10 +12557,14 @@ export type TagEditUpdateMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -12312,10 +12648,14 @@ export type TagEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -12367,10 +12707,14 @@ export type TagEditUpdateMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -12518,10 +12862,14 @@ export type TagEditUpdateMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -12854,10 +13202,14 @@ export type VoteMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -13009,10 +13361,14 @@ export type VoteMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -13152,10 +13508,14 @@ export type VoteMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -13207,10 +13567,14 @@ export type VoteMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -13387,10 +13751,14 @@ export type VoteMutation = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -13474,10 +13842,14 @@ export type VoteMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -13529,10 +13901,14 @@ export type VoteMutation = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -13680,10 +14056,14 @@ export type VoteMutation = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -14000,10 +14380,14 @@ export type DraftQuery = {
                 career_end_year?: number | null;
                 career_start_year?: number | null;
                 breast_type?: BreastTypeEnum | null;
-                waist_size?: number | null;
-                hip_size?: number | null;
-                band_size?: number | null;
-                cup_size?: string | null;
+                waist_size_us?: number | null;
+                hip_size_us?: number | null;
+                band_size_us?: number | null;
+                cup_size_us?: string | null;
+                waist_size_jp?: number | null;
+                hip_size_jp?: number | null;
+                band_size_jp?: number | null;
+                cup_size_jp?: string | null;
                 is_favorite: boolean;
                 tattoos?: Array<{
                   __typename: "BodyModification";
@@ -14139,10 +14523,14 @@ export type EditQuery = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -14294,10 +14682,14 @@ export type EditQuery = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -14437,10 +14829,14 @@ export type EditQuery = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -14492,10 +14888,14 @@ export type EditQuery = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -14672,10 +15072,14 @@ export type EditQuery = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -14759,10 +15163,14 @@ export type EditQuery = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -14814,10 +15222,14 @@ export type EditQuery = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -14965,10 +15377,14 @@ export type EditQuery = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -15161,10 +15577,14 @@ export type EditUpdateQuery = {
           career_end_year?: number | null;
           career_start_year?: number | null;
           breast_type?: BreastTypeEnum | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
-          band_size?: number | null;
-          cup_size?: string | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          band_size_us?: number | null;
+          cup_size_us?: string | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
+          band_size_jp?: number | null;
+          cup_size_jp?: string | null;
           is_favorite: boolean;
           tattoos?: Array<{
             __typename: "BodyModification";
@@ -15314,10 +15734,14 @@ export type EditUpdateQuery = {
           eye_color?: EyeColorEnum | null;
           hair_color?: HairColorEnum | null;
           height?: number | null;
-          cup_size?: string | null;
-          band_size?: number | null;
-          waist_size?: number | null;
-          hip_size?: number | null;
+          cup_size_us?: string | null;
+          band_size_us?: number | null;
+          waist_size_us?: number | null;
+          hip_size_us?: number | null;
+          cup_size_jp?: string | null;
+          band_size_jp?: number | null;
+          waist_size_jp?: number | null;
+          hip_size_jp?: number | null;
           breast_type?: BreastTypeEnum | null;
           career_start_year?: number | null;
           career_end_year?: number | null;
@@ -15421,10 +15845,14 @@ export type EditUpdateQuery = {
               career_end_year?: number | null;
               career_start_year?: number | null;
               breast_type?: BreastTypeEnum | null;
-              waist_size?: number | null;
-              hip_size?: number | null;
-              band_size?: number | null;
-              cup_size?: string | null;
+              waist_size_us?: number | null;
+              hip_size_us?: number | null;
+              band_size_us?: number | null;
+              cup_size_us?: string | null;
+              waist_size_jp?: number | null;
+              hip_size_jp?: number | null;
+              band_size_jp?: number | null;
+              cup_size_jp?: string | null;
               is_favorite: boolean;
               tattoos?: Array<{
                 __typename: "BodyModification";
@@ -15604,10 +16032,14 @@ export type EditsQuery = {
             career_end_year?: number | null;
             career_start_year?: number | null;
             breast_type?: BreastTypeEnum | null;
-            waist_size?: number | null;
-            hip_size?: number | null;
-            band_size?: number | null;
-            cup_size?: string | null;
+            waist_size_us?: number | null;
+            hip_size_us?: number | null;
+            band_size_us?: number | null;
+            cup_size_us?: string | null;
+            waist_size_jp?: number | null;
+            hip_size_jp?: number | null;
+            band_size_jp?: number | null;
+            cup_size_jp?: string | null;
             is_favorite: boolean;
             tattoos?: Array<{
               __typename: "BodyModification";
@@ -15763,10 +16195,14 @@ export type EditsQuery = {
             eye_color?: EyeColorEnum | null;
             hair_color?: HairColorEnum | null;
             height?: number | null;
-            cup_size?: string | null;
-            band_size?: number | null;
-            waist_size?: number | null;
-            hip_size?: number | null;
+            cup_size_us?: string | null;
+            band_size_us?: number | null;
+            waist_size_us?: number | null;
+            hip_size_us?: number | null;
+            cup_size_jp?: string | null;
+            band_size_jp?: number | null;
+            waist_size_jp?: number | null;
+            hip_size_jp?: number | null;
             breast_type?: BreastTypeEnum | null;
             career_start_year?: number | null;
             career_end_year?: number | null;
@@ -15910,10 +16346,14 @@ export type EditsQuery = {
                 career_end_year?: number | null;
                 career_start_year?: number | null;
                 breast_type?: BreastTypeEnum | null;
-                waist_size?: number | null;
-                hip_size?: number | null;
-                band_size?: number | null;
-                cup_size?: string | null;
+                waist_size_us?: number | null;
+                hip_size_us?: number | null;
+                band_size_us?: number | null;
+                cup_size_us?: string | null;
+                waist_size_jp?: number | null;
+                hip_size_jp?: number | null;
+                band_size_jp?: number | null;
+                cup_size_jp?: string | null;
                 is_favorite: boolean;
                 tattoos?: Array<{
                   __typename: "BodyModification";
@@ -15965,10 +16405,14 @@ export type EditsQuery = {
                 career_end_year?: number | null;
                 career_start_year?: number | null;
                 breast_type?: BreastTypeEnum | null;
-                waist_size?: number | null;
-                hip_size?: number | null;
-                band_size?: number | null;
-                cup_size?: string | null;
+                waist_size_us?: number | null;
+                hip_size_us?: number | null;
+                band_size_us?: number | null;
+                cup_size_us?: string | null;
+                waist_size_jp?: number | null;
+                hip_size_jp?: number | null;
+                band_size_jp?: number | null;
+                cup_size_jp?: string | null;
                 is_favorite: boolean;
                 tattoos?: Array<{
                   __typename: "BodyModification";
@@ -16149,10 +16593,14 @@ export type EditsQuery = {
             eye_color?: EyeColorEnum | null;
             hair_color?: HairColorEnum | null;
             height?: number | null;
-            cup_size?: string | null;
-            band_size?: number | null;
-            waist_size?: number | null;
-            hip_size?: number | null;
+            cup_size_us?: string | null;
+            band_size_us?: number | null;
+            waist_size_us?: number | null;
+            hip_size_us?: number | null;
+            cup_size_jp?: string | null;
+            band_size_jp?: number | null;
+            waist_size_jp?: number | null;
+            hip_size_jp?: number | null;
             breast_type?: BreastTypeEnum | null;
             career_start_year?: number | null;
             career_end_year?: number | null;
@@ -16240,10 +16688,14 @@ export type EditsQuery = {
                 career_end_year?: number | null;
                 career_start_year?: number | null;
                 breast_type?: BreastTypeEnum | null;
-                waist_size?: number | null;
-                hip_size?: number | null;
-                band_size?: number | null;
-                cup_size?: string | null;
+                waist_size_us?: number | null;
+                hip_size_us?: number | null;
+                band_size_us?: number | null;
+                cup_size_us?: string | null;
+                waist_size_jp?: number | null;
+                hip_size_jp?: number | null;
+                band_size_jp?: number | null;
+                cup_size_jp?: string | null;
                 is_favorite: boolean;
                 tattoos?: Array<{
                   __typename: "BodyModification";
@@ -16295,10 +16747,14 @@ export type EditsQuery = {
                 career_end_year?: number | null;
                 career_start_year?: number | null;
                 breast_type?: BreastTypeEnum | null;
-                waist_size?: number | null;
-                hip_size?: number | null;
-                band_size?: number | null;
-                cup_size?: string | null;
+                waist_size_us?: number | null;
+                hip_size_us?: number | null;
+                band_size_us?: number | null;
+                cup_size_us?: string | null;
+                waist_size_jp?: number | null;
+                hip_size_jp?: number | null;
+                band_size_jp?: number | null;
+                cup_size_jp?: string | null;
                 is_favorite: boolean;
                 tattoos?: Array<{
                   __typename: "BodyModification";
@@ -16450,10 +16906,14 @@ export type EditsQuery = {
             career_end_year?: number | null;
             career_start_year?: number | null;
             breast_type?: BreastTypeEnum | null;
-            waist_size?: number | null;
-            hip_size?: number | null;
-            band_size?: number | null;
-            cup_size?: string | null;
+            waist_size_us?: number | null;
+            hip_size_us?: number | null;
+            band_size_us?: number | null;
+            cup_size_us?: string | null;
+            waist_size_jp?: number | null;
+            hip_size_jp?: number | null;
+            band_size_jp?: number | null;
+            cup_size_jp?: string | null;
             is_favorite: boolean;
             tattoos?: Array<{
               __typename: "BodyModification";
@@ -16628,10 +17088,14 @@ export type FullPerformerQuery = {
     career_end_year?: number | null;
     career_start_year?: number | null;
     breast_type?: BreastTypeEnum | null;
-    waist_size?: number | null;
-    hip_size?: number | null;
-    band_size?: number | null;
-    cup_size?: string | null;
+    waist_size_us?: number | null;
+    hip_size_us?: number | null;
+    band_size_us?: number | null;
+    cup_size_us?: string | null;
+    waist_size_jp?: number | null;
+    hip_size_jp?: number | null;
+    band_size_jp?: number | null;
+    cup_size_jp?: string | null;
     is_favorite: boolean;
     studios: Array<{
       __typename: "PerformerStudio";
@@ -16714,10 +17178,14 @@ export type PerformerQuery = {
     career_end_year?: number | null;
     career_start_year?: number | null;
     breast_type?: BreastTypeEnum | null;
-    waist_size?: number | null;
-    hip_size?: number | null;
-    band_size?: number | null;
-    cup_size?: string | null;
+    waist_size_us?: number | null;
+    hip_size_us?: number | null;
+    band_size_us?: number | null;
+    cup_size_us?: string | null;
+    waist_size_jp?: number | null;
+    hip_size_jp?: number | null;
+    band_size_jp?: number | null;
+    cup_size_jp?: string | null;
     is_favorite: boolean;
     tattoos?: Array<{
       __typename: "BodyModification";
@@ -16771,10 +17239,14 @@ export type PerformersQuery = {
       career_end_year?: number | null;
       career_start_year?: number | null;
       breast_type?: BreastTypeEnum | null;
-      waist_size?: number | null;
-      hip_size?: number | null;
-      band_size?: number | null;
-      cup_size?: string | null;
+      waist_size_us?: number | null;
+      hip_size_us?: number | null;
+      band_size_us?: number | null;
+      cup_size_us?: string | null;
+      waist_size_jp?: number | null;
+      hip_size_jp?: number | null;
+      band_size_jp?: number | null;
+      cup_size_jp?: string | null;
       is_favorite: boolean;
       tattoos?: Array<{
         __typename: "BodyModification";
@@ -16947,10 +17419,14 @@ export type QueryExistingSceneQuery = {
             career_end_year?: number | null;
             career_start_year?: number | null;
             breast_type?: BreastTypeEnum | null;
-            waist_size?: number | null;
-            hip_size?: number | null;
-            band_size?: number | null;
-            cup_size?: string | null;
+            waist_size_us?: number | null;
+            hip_size_us?: number | null;
+            band_size_us?: number | null;
+            cup_size_us?: string | null;
+            waist_size_jp?: number | null;
+            hip_size_jp?: number | null;
+            band_size_jp?: number | null;
+            cup_size_jp?: string | null;
             is_favorite: boolean;
             tattoos?: Array<{
               __typename: "BodyModification";
@@ -17106,10 +17582,14 @@ export type QueryExistingSceneQuery = {
             eye_color?: EyeColorEnum | null;
             hair_color?: HairColorEnum | null;
             height?: number | null;
-            cup_size?: string | null;
-            band_size?: number | null;
-            waist_size?: number | null;
-            hip_size?: number | null;
+            cup_size_us?: string | null;
+            band_size_us?: number | null;
+            waist_size_us?: number | null;
+            hip_size_us?: number | null;
+            cup_size_jp?: string | null;
+            band_size_jp?: number | null;
+            waist_size_jp?: number | null;
+            hip_size_jp?: number | null;
             breast_type?: BreastTypeEnum | null;
             career_start_year?: number | null;
             career_end_year?: number | null;
@@ -17253,10 +17733,14 @@ export type QueryExistingSceneQuery = {
                 career_end_year?: number | null;
                 career_start_year?: number | null;
                 breast_type?: BreastTypeEnum | null;
-                waist_size?: number | null;
-                hip_size?: number | null;
-                band_size?: number | null;
-                cup_size?: string | null;
+                waist_size_us?: number | null;
+                hip_size_us?: number | null;
+                band_size_us?: number | null;
+                cup_size_us?: string | null;
+                waist_size_jp?: number | null;
+                hip_size_jp?: number | null;
+                band_size_jp?: number | null;
+                cup_size_jp?: string | null;
                 is_favorite: boolean;
                 tattoos?: Array<{
                   __typename: "BodyModification";
@@ -17308,10 +17792,14 @@ export type QueryExistingSceneQuery = {
                 career_end_year?: number | null;
                 career_start_year?: number | null;
                 breast_type?: BreastTypeEnum | null;
-                waist_size?: number | null;
-                hip_size?: number | null;
-                band_size?: number | null;
-                cup_size?: string | null;
+                waist_size_us?: number | null;
+                hip_size_us?: number | null;
+                band_size_us?: number | null;
+                cup_size_us?: string | null;
+                waist_size_jp?: number | null;
+                hip_size_jp?: number | null;
+                band_size_jp?: number | null;
+                cup_size_jp?: string | null;
                 is_favorite: boolean;
                 tattoos?: Array<{
                   __typename: "BodyModification";
@@ -17492,10 +17980,14 @@ export type QueryExistingSceneQuery = {
             eye_color?: EyeColorEnum | null;
             hair_color?: HairColorEnum | null;
             height?: number | null;
-            cup_size?: string | null;
-            band_size?: number | null;
-            waist_size?: number | null;
-            hip_size?: number | null;
+            cup_size_us?: string | null;
+            band_size_us?: number | null;
+            waist_size_us?: number | null;
+            hip_size_us?: number | null;
+            cup_size_jp?: string | null;
+            band_size_jp?: number | null;
+            waist_size_jp?: number | null;
+            hip_size_jp?: number | null;
             breast_type?: BreastTypeEnum | null;
             career_start_year?: number | null;
             career_end_year?: number | null;
@@ -17583,10 +18075,14 @@ export type QueryExistingSceneQuery = {
                 career_end_year?: number | null;
                 career_start_year?: number | null;
                 breast_type?: BreastTypeEnum | null;
-                waist_size?: number | null;
-                hip_size?: number | null;
-                band_size?: number | null;
-                cup_size?: string | null;
+                waist_size_us?: number | null;
+                hip_size_us?: number | null;
+                band_size_us?: number | null;
+                cup_size_us?: string | null;
+                waist_size_jp?: number | null;
+                hip_size_jp?: number | null;
+                band_size_jp?: number | null;
+                cup_size_jp?: string | null;
                 is_favorite: boolean;
                 tattoos?: Array<{
                   __typename: "BodyModification";
@@ -17638,10 +18134,14 @@ export type QueryExistingSceneQuery = {
                 career_end_year?: number | null;
                 career_start_year?: number | null;
                 breast_type?: BreastTypeEnum | null;
-                waist_size?: number | null;
-                hip_size?: number | null;
-                band_size?: number | null;
-                cup_size?: string | null;
+                waist_size_us?: number | null;
+                hip_size_us?: number | null;
+                band_size_us?: number | null;
+                cup_size_us?: string | null;
+                waist_size_jp?: number | null;
+                hip_size_jp?: number | null;
+                band_size_jp?: number | null;
+                cup_size_jp?: string | null;
                 is_favorite: boolean;
                 tattoos?: Array<{
                   __typename: "BodyModification";
@@ -17793,10 +18293,14 @@ export type QueryExistingSceneQuery = {
             career_end_year?: number | null;
             career_start_year?: number | null;
             breast_type?: BreastTypeEnum | null;
-            waist_size?: number | null;
-            hip_size?: number | null;
-            band_size?: number | null;
-            cup_size?: string | null;
+            waist_size_us?: number | null;
+            hip_size_us?: number | null;
+            band_size_us?: number | null;
+            cup_size_us?: string | null;
+            waist_size_jp?: number | null;
+            hip_size_jp?: number | null;
+            band_size_jp?: number | null;
+            cup_size_jp?: string | null;
             is_favorite: boolean;
             tattoos?: Array<{
               __typename: "BodyModification";
@@ -18701,10 +19205,14 @@ export const PerformerFragmentDoc = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -19404,19 +19912,35 @@ export const EditFragmentDoc = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -19908,19 +20432,35 @@ export const EditFragmentDoc = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -20411,10 +20951,14 @@ export const EditFragmentDoc = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -21612,10 +22156,14 @@ export const ApplyEditDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -22159,19 +22707,35 @@ export const ApplyEditDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -22663,19 +23227,35 @@ export const ApplyEditDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -24024,10 +24604,14 @@ export const PerformerEditDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -24571,19 +25155,35 @@ export const PerformerEditDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -25075,19 +25675,35 @@ export const PerformerEditDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -25632,10 +26248,14 @@ export const PerformerEditUpdateDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -26179,19 +26799,35 @@ export const PerformerEditUpdateDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -26683,19 +27319,35 @@ export const PerformerEditUpdateDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -27404,10 +28056,14 @@ export const SceneEditDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -27951,19 +28607,35 @@ export const SceneEditDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -28455,19 +29127,35 @@ export const SceneEditDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -29009,10 +29697,14 @@ export const SceneEditUpdateDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -29556,19 +30248,35 @@ export const SceneEditUpdateDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -30060,19 +30768,35 @@ export const SceneEditUpdateDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -30601,10 +31325,14 @@ export const StudioEditDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -31148,19 +31876,35 @@ export const StudioEditDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -31652,19 +32396,35 @@ export const StudioEditDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -32206,10 +32966,14 @@ export const StudioEditUpdateDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -32753,19 +33517,35 @@ export const StudioEditUpdateDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -33257,19 +34037,35 @@ export const StudioEditUpdateDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -33798,10 +34594,14 @@ export const TagEditDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -34345,19 +35145,35 @@ export const TagEditDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -34849,19 +35665,35 @@ export const TagEditDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -35403,10 +36235,14 @@ export const TagEditUpdateDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -35950,19 +36786,35 @@ export const TagEditUpdateDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -36454,19 +37306,35 @@ export const TagEditUpdateDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -37604,10 +38472,14 @@ export const VoteDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -38151,19 +39023,35 @@ export const VoteDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -38655,19 +39543,35 @@ export const VoteDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -39705,10 +40609,14 @@ export const DraftDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -40039,10 +40947,14 @@ export const EditDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -40586,19 +41498,35 @@ export const EditDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -41090,19 +42018,35 @@ export const EditDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -41770,19 +42714,35 @@ export const EditUpdateDocument = {
                             },
                             {
                               kind: "Field",
-                              name: { kind: "Name", value: "cup_size" },
+                              name: { kind: "Name", value: "cup_size_us" },
                             },
                             {
                               kind: "Field",
-                              name: { kind: "Name", value: "band_size" },
+                              name: { kind: "Name", value: "band_size_us" },
                             },
                             {
                               kind: "Field",
-                              name: { kind: "Name", value: "waist_size" },
+                              name: { kind: "Name", value: "waist_size_us" },
                             },
                             {
                               kind: "Field",
-                              name: { kind: "Name", value: "hip_size" },
+                              name: { kind: "Name", value: "hip_size_us" },
+                            },
+                            {
+                              kind: "Field",
+                              name: { kind: "Name", value: "cup_size_jp" },
+                            },
+                            {
+                              kind: "Field",
+                              name: { kind: "Name", value: "band_size_jp" },
+                            },
+                            {
+                              kind: "Field",
+                              name: { kind: "Name", value: "waist_size_jp" },
+                            },
+                            {
+                              kind: "Field",
+                              name: { kind: "Name", value: "hip_size_jp" },
                             },
                             {
                               kind: "Field",
@@ -42221,10 +43181,14 @@ export const EditUpdateDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -42671,10 +43635,14 @@ export const EditsDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -43218,19 +44186,35 @@ export const EditsDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -43722,19 +44706,35 @@ export const EditsDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -44245,10 +45245,14 @@ export const FullPerformerDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -44531,10 +45535,14 @@ export const PerformerDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -44695,19 +45703,35 @@ export const PerformersDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -45160,10 +46184,14 @@ export const QueryExistingSceneDocument = {
           { kind: "Field", name: { kind: "Name", value: "career_end_year" } },
           { kind: "Field", name: { kind: "Name", value: "career_start_year" } },
           { kind: "Field", name: { kind: "Name", value: "breast_type" } },
-          { kind: "Field", name: { kind: "Name", value: "waist_size" } },
-          { kind: "Field", name: { kind: "Name", value: "hip_size" } },
-          { kind: "Field", name: { kind: "Name", value: "band_size" } },
-          { kind: "Field", name: { kind: "Name", value: "cup_size" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_us" } },
+          { kind: "Field", name: { kind: "Name", value: "waist_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "hip_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "band_size_jp" } },
+          { kind: "Field", name: { kind: "Name", value: "cup_size_jp" } },
           {
             kind: "Field",
             name: { kind: "Name", value: "tattoos" },
@@ -45688,19 +46716,35 @@ export const QueryExistingSceneDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",
@@ -46192,19 +47236,35 @@ export const QueryExistingSceneDocument = {
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "cup_size" },
+                        name: { kind: "Name", value: "cup_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "band_size" },
+                        name: { kind: "Name", value: "band_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "waist_size" },
+                        name: { kind: "Name", value: "waist_size_us" },
                       },
                       {
                         kind: "Field",
-                        name: { kind: "Name", value: "hip_size" },
+                        name: { kind: "Name", value: "hip_size_us" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cup_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "band_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "waist_size_jp" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "hip_size_jp" },
                       },
                       {
                         kind: "Field",

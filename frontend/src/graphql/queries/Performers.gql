@@ -20,10 +20,14 @@ query Performers($input: PerformerQueryInput!) {
       career_end_year
       career_start_year
       breast_type
-      waist_size
-      hip_size
-      band_size
-      cup_size
+      waist_size_us
+      hip_size_us
+      band_size_us
+      cup_size_us
+      waist_size_jp
+      hip_size_jp
+      band_size_jp
+      cup_size_jp
       tattoos {
         location
         description

@@ -115,20 +115,36 @@ func (r *performerResolver) Measurements(ctx context.Context, obj *models.Perfor
 	return &ret, nil
 }
 
-func (r *performerResolver) CupSize(ctx context.Context, obj *models.Performer) (*string, error) {
-	return resolveNullString(obj.CupSize), nil
+func (r *performerResolver) CupSizeUs(ctx context.Context, obj *models.Performer) (*string, error) {
+	return resolveNullString(obj.CupSizeUS), nil
 }
 
-func (r *performerResolver) BandSize(ctx context.Context, obj *models.Performer) (*int, error) {
-	return resolveNullInt64(obj.BandSize)
+func (r *performerResolver) BandSizeUs(ctx context.Context, obj *models.Performer) (*int, error) {
+	return resolveNullInt64(obj.BandSizeUS)
 }
 
-func (r *performerResolver) WaistSize(ctx context.Context, obj *models.Performer) (*int, error) {
-	return resolveNullInt64(obj.WaistSize)
+func (r *performerResolver) WaistSizeUs(ctx context.Context, obj *models.Performer) (*int, error) {
+	return resolveNullInt64(obj.WaistSizeUS)
 }
 
-func (r *performerResolver) HipSize(ctx context.Context, obj *models.Performer) (*int, error) {
-	return resolveNullInt64(obj.HipSize)
+func (r *performerResolver) HipSizeUs(ctx context.Context, obj *models.Performer) (*int, error) {
+	return resolveNullInt64(obj.HipSizeUS)
+}
+
+func (r *performerResolver) CupSizeJp(ctx context.Context, obj *models.Performer) (*string, error) {
+	return resolveNullString(obj.CupSizeJP), nil
+}
+
+func (r *performerResolver) BandSizeJp(ctx context.Context, obj *models.Performer) (*int, error) {
+	return resolveNullInt64(obj.BandSizeJP)
+}
+
+func (r *performerResolver) WaistSizeJp(ctx context.Context, obj *models.Performer) (*int, error) {
+	return resolveNullInt64(obj.WaistSizeJP)
+}
+
+func (r *performerResolver) HipSizeJp(ctx context.Context, obj *models.Performer) (*int, error) {
+	return resolveNullInt64(obj.HipSizeJP)
 }
 
 func (r *performerResolver) BreastType(ctx context.Context, obj *models.Performer) (*models.BreastTypeEnum, error) {

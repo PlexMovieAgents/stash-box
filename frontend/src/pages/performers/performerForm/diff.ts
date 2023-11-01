@@ -61,7 +61,8 @@ const selectPerformerDetails = (
     original?.aliases ?? [],
     (a) => a
   );
-  const [newCupSize, newBandSize] = parseBraSize(data.braSize ?? "");
+  const [newCupSizeUS, newBandSizeUS] = parseBraSize(data.braSizeUS ?? "");
+  const [newCupSizeJP, newBandSizeJP] = parseBraSize(data.braSizeJP ?? "");
 
   return [
     {
@@ -78,10 +79,14 @@ const selectPerformerDetails = (
         data.career_end_year
       ),
       height: diffValue(original?.height, data.height),
-      band_size: diffValue(original?.band_size, newBandSize),
-      cup_size: diffValue(original?.cup_size, newCupSize),
-      waist_size: diffValue(original?.waist_size, data.waistSize),
-      hip_size: diffValue(original?.hip_size, data.hipSize),
+      band_size_us: diffValue(original?.band_size_us, newBandSizeUS),
+      cup_size_us: diffValue(original?.cup_size_us, newCupSizeUS),
+      waist_size_us: diffValue(original?.waist_size_us, data.waistSizeUS),
+      hip_size_us: diffValue(original?.hip_size_us, data.hipSizeUS),
+      band_size_jp: diffValue(original?.band_size_jp, newBandSizeJP),
+      cup_size_jp: diffValue(original?.cup_size_jp, newCupSizeJP),
+      waist_size_jp: diffValue(original?.waist_size_jp, data.waistSizeJP),
+      hip_size_jp: diffValue(original?.hip_size_jp, data.hipSizeJP),
       breast_type: diffValue(
         original?.breast_type,
         breastType(data.breastType)
@@ -105,10 +110,14 @@ const selectPerformerDetails = (
         original?.career_end_year
       ),
       height: diffValue(data.height, original?.height),
-      band_size: diffValue(newBandSize, original?.band_size),
-      cup_size: diffValue(newCupSize, original?.cup_size),
-      waist_size: diffValue(data.waistSize, original?.waist_size),
-      hip_size: diffValue(data.hipSize, original?.hip_size),
+      band_size_us: diffValue(newBandSizeUS, original?.band_size_us),
+      cup_size_us: diffValue(newCupSizeUS, original?.cup_size_us),
+      waist_size_us: diffValue(data.waistSizeUS, original?.waist_size_us),
+      hip_size_us: diffValue(data.hipSizeUS, original?.hip_size_us),
+      band_size_jp: diffValue(newBandSizeJP, original?.band_size_jp),
+      cup_size_jp: diffValue(newCupSizeJP, original?.cup_size_jp),
+      waist_size_jp: diffValue(data.waistSizeJP, original?.waist_size_jp),
+      hip_size_jp: diffValue(data.hipSizeJP, original?.hip_size_jp),
       breast_type: diffValue(
         breastType(data.breastType),
         original?.breast_type
